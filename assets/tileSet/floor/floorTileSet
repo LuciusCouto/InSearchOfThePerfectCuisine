@@ -1,0 +1,15 @@
+floorTileSet.png
+size:256,64
+repeat:none
+grama00
+bounds:172,2,32,32
+grama01
+bounds:70,2,32,32
+pisoCeramica00
+bounds:36,2,32,32
+pisoCeramica01
+bounds:138,2,32,32
+pisoMadeira00
+bounds:2,2,32,32
+pisoPedra00
+bounds:104,2,32,32
