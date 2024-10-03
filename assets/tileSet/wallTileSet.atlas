@@ -1,0 +1,9 @@
+wallTileSet.png
+size:64,256
+repeat:none
+paredeMadeira00
+bounds:2,2,32,64
+paredeMadeira01
+bounds:2,68,32,64
+paredeMadeira02
+bounds:2,134,32,64

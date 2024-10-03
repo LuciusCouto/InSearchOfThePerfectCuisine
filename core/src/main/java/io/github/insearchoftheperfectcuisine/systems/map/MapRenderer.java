@@ -11,7 +11,8 @@ public class MapRenderer {
     float unitScale;
     public MapRenderer(float unitScale) {
         this.unitScale = unitScale;
-        map = new TmxMapLoader().load("maps/mapaTeste.tmx");
+        map = new TmxMapLoader().load("maps/teste.tmx");
+
         renderer = new OrthogonalTiledMapRenderer(map, this.unitScale);
     }
 
