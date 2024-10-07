@@ -6,9 +6,19 @@
    <object id="1" x="32" y="22" width="10" height="32" rotation="90"/>
   </objectgroup>
  </tile>
+ <tile id="1">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="22" y="22" width="10" height="10"/>
+  </objectgroup>
+ </tile>
  <tile id="2">
   <objectgroup draworder="index" id="5">
    <object id="22" x="22" y="0" width="10" height="32"/>
+  </objectgroup>
+ </tile>
+ <tile id="3">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="22" y="0" width="10" height="10"/>
   </objectgroup>
  </tile>
  <tile id="4">
@@ -16,9 +26,19 @@
    <object id="1" x="32" y="0" width="10" height="32" rotation="90"/>
   </objectgroup>
  </tile>
+ <tile id="5">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="10" height="10"/>
+  </objectgroup>
+ </tile>
  <tile id="6">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="10" height="32"/>
+  </objectgroup>
+ </tile>
+ <tile id="7">
+  <objectgroup draworder="index" id="3">
+   <object id="2" x="0" y="22" width="10" height="10"/>
   </objectgroup>
  </tile>
  <tile id="8">

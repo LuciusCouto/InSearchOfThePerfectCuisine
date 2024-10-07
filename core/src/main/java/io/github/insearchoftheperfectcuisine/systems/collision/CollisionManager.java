@@ -4,9 +4,12 @@ package io.github.insearchoftheperfectcuisine.systems.collision;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.objects.PolygonMapObject;
+import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
@@ -61,22 +64,66 @@ public class CollisionManager {
         float scale = 1 / 32f; // Ajuste a escala se necessário
         float tileWidth = 1f;
         float tileHeight = 1f;
-        float offsetX = 0f;
-        float offsetY = 0f;
 
         // Define a posição do corpo com base nas propriedades ajustadas
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.StaticBody;
-        bodyDef.position.set(x + offsetX + tileWidth / 2, y + offsetY + tileHeight / 2);
+        bodyDef.position.set(x + tileWidth / 2, y + tileHeight / 2);
         Body body = world.createBody(bodyDef);
 
-        // Cria a forma da colisão baseada nas dimensões ajustadas
-        PolygonShape shape = new PolygonShape();
-        shape.setAsBox(tileWidth / 2, tileHeight / 2); // Utiliza tileWidth e tileHeight para definir a forma
+        boolean customShapeCreated = false;
 
-        FixtureDef fixtureDef = new FixtureDef();
-        fixtureDef.shape = shape;
+        // Verifica se o tile possui uma forma de colisão personalizada como RectangleMapObject
+        if (tile.getObjects().getCount() > 0) {
+            for (MapObject object : tile.getObjects()) {
+                if (object instanceof RectangleMapObject) {
+                    RectangleMapObject rectangleObject = (RectangleMapObject) object;
+                    Rectangle rect = rectangleObject.getRectangle();
 
+                    // Obtém a rotação do objeto a partir das propriedades
+                    float rotation = 0;
+                    if (rectangleObject.getProperties().containsKey("rotation")) {
+                        rotation = (float) Math.toRadians((float) rectangleObject.getProperties().get("rotation"));
+                    }
+
+                    // Define as dimensões do retângulo
+                    float rectWidth = rect.width * scale / 2; // O tamanho do retângulo deve ser a metade da largura
+                    float rectHeight = rect.height * scale / 2; // O tamanho do retângulo deve ser a metade da altura
+
+                    // Calcula a posição do retângulo no canto inferior esquerdo do tile
+                    float rectX = 0; // Offset a partir do canto inferior esquerdo
+                    float rectY = 0; // Offset a partir do canto inferior esquerdo
+
+                    // Cria a forma como um retângulo e aplica a rotação correta
+                    PolygonShape shape = new PolygonShape();
+                    shape.setAsBox(rectWidth, rectHeight, new Vector2(rectX, rectY), rotation);
+
+                    FixtureDef fixtureDef = new FixtureDef();
+                    fixtureDef.shape = shape;
+                    applyCollisionProperties(fixtureDef, collisionType);
+
+                    body.createFixture(fixtureDef);
+                    shape.dispose(); // Libera os recursos
+                    customShapeCreated = true;
+                }
+            }
+        }
+
+        // Se nenhuma forma personalizada foi encontrada, aplica a colisão padrão
+        if (!customShapeCreated) {
+            PolygonShape defaultShape = new PolygonShape();
+            defaultShape.setAsBox(tileWidth / 2, tileHeight / 2); // Utiliza tileWidth e tileHeight para definir a forma
+
+            FixtureDef defaultFixtureDef = new FixtureDef();
+            defaultFixtureDef.shape = defaultShape;
+            applyCollisionProperties(defaultFixtureDef, collisionType);
+
+            body.createFixture(defaultFixtureDef);
+            defaultShape.dispose(); // Libera os recursos da forma após a utilização
+        }
+    }
+
+    private void applyCollisionProperties(FixtureDef fixtureDef, String collisionType) {
         switch (collisionType) {
             case "bouncy":
                 fixtureDef.restitution = 1f;
@@ -91,8 +138,5 @@ public class CollisionManager {
                 fixtureDef.restitution = 0f;
                 break;
         }
-
-        body.createFixture(fixtureDef);
-        shape.dispose(); // Libera os recursos da forma após a utilização
     }
 }
