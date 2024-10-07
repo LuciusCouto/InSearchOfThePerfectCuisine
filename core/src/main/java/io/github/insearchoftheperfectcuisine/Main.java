@@ -21,7 +21,6 @@ public class Main extends Game {
 
     @Override
     public void render() {
-        Gdx.app.log("Fps: ", Integer.toString(Gdx.graphics.getFramesPerSecond()));
         // Chama o método de renderização da tela atual
         super.render();
     }
