@@ -1,11 +1,13 @@
 package io.github.insearchoftheperfectcuisine.screens;
 
+import com.badlogic.ashley.core.Engine;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Box2D;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -28,6 +30,7 @@ public class GameScreen implements Screen {
 
     @Override
     public void show() {
+        Box2D.init();
         float w = Gdx.graphics.getWidth();
         float h = Gdx.graphics.getHeight();
 
@@ -37,10 +40,9 @@ public class GameScreen implements Screen {
         camera.setToOrtho(false, 10, 5 * (w / h));
         camera.update();
         viewport = new ExtendViewport(20, 10, camera);
-        world = new World(new Vector2(0, -9.8f), true);
+        world = new World(new Vector2(0, 0f), true);
         mapR = new MapRenderer(unitScale, world);
         debugRenderer = new Box2DDebugRenderer();
-
     }
 
     @Override
@@ -48,6 +50,11 @@ public class GameScreen implements Screen {
         ScreenUtils.clear(0f, 0f, 0f, 1f);
         // Atualiza o mundo do Box2D
         world.step(1/60f, 6, 2);
+
+        // Atualiza o jogador
+
+        // Faz a câmera seguir o jogador
+        camera.update();
 
         // Renderiza o mapa
         viewport.apply();
@@ -61,17 +68,12 @@ public class GameScreen implements Screen {
         if (Gdx.input.isKeyPressed(Input.Keys.Q)) {
             camera.zoom -= 1 * unitScale;
         }
-        if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            camera.position.y += 10 * unitScale;
+
+        if (Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+            mapR.loadMap("maps/teste.tmx");
         }
-        if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            camera.position.y -= 10 * unitScale;
-        }
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            camera.position.x -= 10 * unitScale;
-        }
-        if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            camera.position.x += 10 * unitScale;
+        if (Gdx.input.isKeyPressed(Input.Keys.CONTROL_LEFT)) {
+            mapR.loadMap("maps/teste2.tmx");
         }
     }
 

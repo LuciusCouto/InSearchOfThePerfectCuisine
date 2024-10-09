@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- created with https://www.codeandweb.com/physicseditor -->
+<bodydef>
+	<body name="cimaParede00">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>0.0000, 0.0000, 32.0000, 0.0000, 32.0000, 10.0000, 0.0000, 10.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede01">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>25.0000, 10.0000, 22.0000, 7.0000, 22.0000, 0.0000, 32.0000, 0.0000, 32.0000, 10.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede02">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>32.0000, 0.0000, 32.0000, 32.0000, 22.0000, 32.0000, 22.0000, 0.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede03">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>25.0000, 22.0000, 32.0000, 22.0000, 32.0000, 32.0000, 22.0000, 32.0000, 22.0000, 25.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede04">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>0.0000, 22.0000, 32.0000, 22.0000, 32.0000, 32.0000, 0.0000, 32.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede05">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>10.0000, 25.0000, 10.0000, 32.0000, 0.0000, 32.0000, 0.0000, 22.0000, 7.0000, 22.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede06">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>10.0000, 0.0000, 10.0000, 32.0000, 0.0000, 32.0000, 0.0000, 0.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede07">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>10.0000, 7.0000, 7.0000, 10.0000, 0.0000, 10.0000, 0.0000, 0.0000, 10.0000, 0.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede08">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>10.0000, 32.0000, 0.0000, 32.0000, 0.0000, 0.0000, 10.0000, 10.0000</polygon>
+			<polygon>0.0000, 0.0000, 32.0000, 0.0000, 32.0000, 10.0000, 10.0000, 10.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede09">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>0.0000, 10.0000, 0.0000, 0.0000, 32.0000, 0.0000, 22.0000, 10.0000</polygon>
+			<polygon>32.0000, 0.0000, 32.0000, 32.0000, 22.0000, 32.0000, 22.0000, 10.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede10">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>10.0000, 30.0000, 8.0000, 32.0000, 3.0000, 32.0000, 0.0000, 29.0000, 10.0000, 0.0000</polygon>
+			<polygon>0.0000, 0.0000, 10.0000, 0.0000, 0.0000, 29.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede11">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>22.0000, 30.0000, 22.0000, 0.0000, 32.0000, 0.0000, 32.0000, 29.0000, 29.0000, 32.0000, 24.0000, 32.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede12">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>0.0000, 22.0000, 32.0000, 22.0000, 32.0000, 32.0000, 0.0000, 32.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede13">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>10.0000, 2.0000, 10.0000, 32.0000, 0.0000, 3.0000, 3.0000, 0.0000, 8.0000, 0.0000</polygon>
+			<polygon>0.0000, 32.0000, 0.0000, 3.0000, 10.0000, 32.0000</polygon>
+		</fixture>
+	</body>
+	<body name="cimaParede14">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>22.0000, 2.0000, 24.0000, 0.0000, 29.0000, 0.0000, 32.0000, 3.0000, 32.0000, 32.0000, 22.0000, 32.0000</polygon>
+		</fixture>
+	</body>
+	<body name="paredeMadeira00">
+		<is_dynamic/>
+		<linear_damping>0</linear_damping>
+		<angular_damping>0</angular_damping>
+		<allow_sleep/>
+		<fixture>
+			<density>2</density>
+			<friction>0</friction>
+			<restitution>0</restitution>
+			<filter_category_bits>1</filter_category_bits>
+			<filter_mask_bits>65535</filter_mask_bits>
+			<filter_group_index>0</filter_group_index>
+			<polygon>32.0000, 0.0000, 32.0000, 32.0000, 0.0000, 32.0000, 0.0000, 0.0000</polygon>
+		</fixture>
+	</body>
+	<metadata>
+		<format>1</format>
+		<ptm_ratio>32</ptm_ratio>
+	</metadata>
+
+</bodydef>
+

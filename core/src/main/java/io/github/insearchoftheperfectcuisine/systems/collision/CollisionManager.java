@@ -87,12 +87,12 @@ public class CollisionManager {
                     }
 
                     // Define as dimensões do retângulo
-                    float rectWidth = rect.width * scale / 2; // O tamanho do retângulo deve ser a metade da largura
-                    float rectHeight = rect.height * scale / 2; // O tamanho do retângulo deve ser a metade da altura
+                    float rectWidth = rect.width * scale / 2;
+                    float rectHeight = rect.height * scale / 2;
 
-                    // Calcula a posição do retângulo no canto inferior esquerdo do tile
-                    float rectX = 0; // Offset a partir do canto inferior esquerdo
-                    float rectY = 0; // Offset a partir do canto inferior esquerdo
+                    // Calcula a posição do retângulo relativo ao canto superior esquerdo do tile
+                    float rectX = (rect.x * scale) - (tileWidth / 2) + rectWidth;
+                    float rectY = (rect.y * scale) - (tileHeight / 2) + rectHeight;
 
                     // Cria a forma como um retângulo e aplica a rotação correta
                     PolygonShape shape = new PolygonShape();
